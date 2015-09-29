@@ -33,7 +33,7 @@ export default (handlers, eventGenerator, update) => {
   function process(event) {
     console.log('Processing', {event});
 
-    return (handlers[event.type] || defaultHandler)(event);
+    return (handlers[event.type] || defaultHandler)(event, clock);
 
     // while(let {value, done} = events.next()) {
     //   const result = (handlers[type] || defaultHandler)(value);
